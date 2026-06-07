@@ -53,25 +53,25 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CORE-01 | Phase TBD | Pending |
-| CORE-02 | Phase TBD | Pending |
-| CORE-03 | Phase TBD | Pending |
-| CORE-04 | Phase TBD | Pending |
-| DISP-01 | Phase TBD | Pending |
-| DISP-02 | Phase TBD | Pending |
-| API-01 | Phase TBD | Pending |
-| API-02 | Phase TBD | Pending |
-| API-03 | Phase TBD | Pending |
-| OPS-01 | Phase TBD | Pending |
-| OPS-02 | Phase TBD | Pending |
-| OPS-03 | Phase TBD | Pending |
-| OPS-04 | Phase TBD | Pending |
+| CORE-01 | Phase 1 | Pending |
+| CORE-02 | Phase 1 | Pending |
+| CORE-03 | Phase 1 | Pending |
+| CORE-04 | Phase 1 | Pending |
+| DISP-01 | Phase 3 | Pending |
+| DISP-02 | Phase 3 | Pending |
+| API-01 | Phase 2 | Pending |
+| API-02 | Phase 3 | Pending |
+| API-03 | Phase 1 | Pending |
+| OPS-01 | Phase 2 | Pending |
+| OPS-02 | Phase 4 | Pending |
+| OPS-03 | Phase 2 | Pending |
+| OPS-04 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 13 total
-- Mapped to phases: 0
-- Unmapped: 13 ⚠️
+- Mapped to phases: 13
+- Unmapped: 0 ✅
 
 ---
 *Requirements defined: 2026-06-07*
-*Last updated: 2026-06-07 after initial definition*
+*Last updated: 2026-06-07 after roadmap creation*
