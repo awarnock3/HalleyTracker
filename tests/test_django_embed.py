@@ -33,5 +33,6 @@ class DjangoEmbedTests(TestCase):
         )
         html = render_embed_block(context)
         self.assertIn("Last updated:", html)
-        self.assertIn("Distance:", html)
+        self.assertIn("Distance to Earth:", html)
+        self.assertIn("Years", html)
         self.assertIn("halley-tracker", html)

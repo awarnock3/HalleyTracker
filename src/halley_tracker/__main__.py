@@ -8,6 +8,7 @@ from datetime import datetime
 from .api import HalleyTrackerService
 from .core import countdown
 from .ops import operator_report
+from .standalone_web import run_standalone_server
 
 
 def parse_args() -> argparse.Namespace:
@@ -34,6 +35,22 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Print operator runtime/dependency diagnostics report.",
     )
+    parser.add_argument(
+        "--serve",
+        action="store_true",
+        help="Run standalone web preview server.",
+    )
+    parser.add_argument(
+        "--host",
+        default="127.0.0.1",
+        help="Host interface for --serve (default: 127.0.0.1).",
+    )
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=8765,
+        help="Port for --serve (default: 8765).",
+    )
     return parser.parse_args()
 
 
@@ -48,6 +65,10 @@ def main() -> int:
     args = parse_args()
     now = parse_now(args.now)
     service = HalleyTrackerService()
+
+    if args.serve:
+        run_standalone_server(host=args.host, port=args.port)
+        return 0
 
     if args.ops_report:
         print("ops_report")

@@ -1,0 +1,2 @@
+[console_scripts]
+halley-tracker = halley_tracker.__main__:main
