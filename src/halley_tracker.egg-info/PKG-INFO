@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: halley-tracker
+Version: 0.1.0
+Summary: Halley's Comet countdown and daily Earth-distance tracker
+Requires-Python: >=3.12
+Provides-Extra: astro
+Requires-Dist: astropy<8.0,>=7.0; extra == "astro"

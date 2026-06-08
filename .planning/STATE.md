@@ -3,14 +3,14 @@
 ## Project Reference
 
 **Core Value**: Always provide a clear, reliable Halley’s Comet countdown and Earth-distance display that can be embedded in the existing Django app.  
-**Current Focus**: Phase 1 - Core Halley Computation Baseline
+**Current Focus**: Phase 4 - Deployment & Offline/Network Ops
 
 ## Current Position
 
-- **Current Phase**: 1 - Core Halley Computation Baseline
-- **Current Plan**: Not started
-- **Overall Status**: Planning complete; execution not started
-- **Progress**: 0/4 phases complete (0%)
+- **Current Phase**: 4 - Deployment & Offline/Network Ops
+- **Current Plan**: 04-01 Ops diagnostics and dependency contract (completed)
+- **Overall Status**: Phase 4 execution started
+- **Progress**: 3/4 phases complete (75%)
 
 ## Performance Metrics
 
@@ -31,9 +31,9 @@
 
 ### TODOs
 
-- Begin Phase 1 planning and implementation.
-- Define canonical Halley perihelion constant/source and provenance format.
-- Define daily snapshot schema shared by API and Django adapter.
+- Create and execute 04-02 for Ubuntu deployment validation checklist.
+- Create and execute 04-03 for offline/network behavior runbook hardening.
+- Finalize operator runbook for manual refresh and stale data handling.
 
 ### Known Risks
 
@@ -47,6 +47,6 @@
 
 ## Session Continuity
 
-**Last completed step**: Roadmap generation and requirement-to-phase mapping.  
-**Next command**: `/gsd-plan-phase 1`  
-**Resume point**: Start executable plan decomposition for Phase 1 success criteria.
+**Last completed step**: Completed plan 04-01 with ops diagnostics and `--ops-report` CLI mode.  
+**Next command**: `/gsd-plan-phase 4`  
+**Resume point**: Generate and execute 04-02 for Ubuntu deployment validation path.
