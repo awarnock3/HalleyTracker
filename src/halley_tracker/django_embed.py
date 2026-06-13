@@ -48,15 +48,16 @@ def render_embed_block(context: dict) -> str:
     freshness_status = escape(str(context["freshness_status"]))
 
     return (
-        '<section class="halley-tracker" data-freshness="{freshness}">'
+        '<section class="halley-tracker" data-freshness="{freshness}" data-countdown-seconds="{countdown_secs}">'
         "<h3>{name} Returns</h3>"
-        '<p class="halley-countdown">Countdown: {countdown}</p>'
+        '<p class="halley-countdown">Countdown: <span id="halley-countdown-text">{countdown}</span></p>'
         '<p class="halley-distance">Distance to Earth: {au:.6f} AU ({km:.0f} km)</p>'
         '<p class="halley-updated">Last updated: {updated}</p>'
         "</section>"
     ).format(
         freshness=freshness_status,
         name=object_name,
+        countdown_secs=countdown_seconds,
         countdown=countdown_text,
         au=distance_au,
         km=distance_km,

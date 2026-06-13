@@ -76,6 +76,37 @@ def _page_html() -> str:
     <p class="title">Halley Tracker Standalone Preview</p>
     {block}
   </main>
+
+  <script>
+    function formatCountdown(totalSeconds) {{
+      let remaining = Math.max(0, totalSeconds);
+      const years = Math.floor(remaining / (365 * 24 * 60 * 60));
+      remaining %= (365 * 24 * 60 * 60);
+      const months = Math.floor(remaining / (30 * 24 * 60 * 60));
+      remaining %= (30 * 24 * 60 * 60);
+      const days = Math.floor(remaining / (24 * 60 * 60));
+      remaining %= (24 * 60 * 60);
+      const hours = Math.floor(remaining / (60 * 60));
+      remaining %= (60 * 60);
+      const minutes = Math.floor(remaining / 60);
+      const seconds = remaining % 60;
+      
+      return `${{years}} Years ${{months}} Months ${{days}} Days ${{hours}} Hours ${{minutes}} Minutes ${{seconds}} Seconds`;
+    }}
+
+    const tracker = document.querySelector('.halley-tracker');
+    if (tracker) {{
+      let countdownSeconds = parseInt(tracker.getAttribute('data-countdown-seconds'), 10);
+      const countdownText = document.getElementById('halley-countdown-text');
+      
+      if (countdownText) {{
+        setInterval(() => {{
+          countdownSeconds--;
+          countdownText.textContent = formatCountdown(countdownSeconds);
+        }}, 1000);
+      }}
+    }}
+  </script>
 </body>
 </html>"""
 
